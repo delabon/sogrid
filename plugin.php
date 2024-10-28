@@ -1,13 +1,14 @@
 <?php
 /**
- * Plugin Name: Sogrid - Post Grid Layouts With Pagination
+ * Plugin Name: Wordpress Post Grid Layouts with Pagination - Sogrid
  * Plugin URI: https://delabon.com/plugin/sogrid
  * Description: Multiple grid design blocks.
  * Author: Sabri Taieb
  * Author URI: https://delabon.com/
- * Version: 1.5.5
+ * Version: 1.5.6
  * Text Domain: sogrid
  * Domain Path: /languages/
+ * License: GPLv2
  */
 
 // Exit if accessed directly.
@@ -18,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Defined
  */
-define('SOGRID_VERSION', '1.5.5');
+define('SOGRID_VERSION', '1.5.6');
 define('SOGRID_URL', plugin_dir_url( __FILE__ ));
 define('SOGRID_DIR', __DIR__);
 define('SOGRID_PANEL_URL', admin_url('admin.php?page=sogrid'));
@@ -360,7 +361,7 @@ class Sogrid{
      * Add a generator meta tag
      */
     function add_generator(){
-        echo '<meta name="generator" content="Sogrid '.SOGRID_VERSION.'" />';
+        echo '<meta name="generator" content="Sogrid '.esc_html(SOGRID_VERSION).'" />';
     }
 
 }

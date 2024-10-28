@@ -1,6 +1,6 @@
 === Wordpress Post Grid Layouts with Pagination - Sogrid ===
 Contributors: delabon
-Requires at least: 5
+Requires at least: 5.0
 Tested up to: 6.6
 Stable tag: 1.5.5
 Requires PHP: 5.4
@@ -27,7 +27,7 @@ Sogrid is a 100% responsive, With the ability to change columns and font size on
 
 **With version 1.2+ you can add pagination to your grids!**
 
-No more pain & No more shortcodes 
+No more pain & No more shortcodes
 
 * [Normal Grid Block](https://delabon.com/demo/sogrid/)
 * [Pinterest Grid Block](https://delabon.com/demo/sogrid/pinterest/)
@@ -45,7 +45,7 @@ No more pain & No more shortcodes
 * 10 Layouts
 * Ajax Pagination
 * Customizable
-* Easy To Use 
+* Easy To Use
 * 100% Responsive and mobile friendly
 * Columns & Font Size By Device (Responsive Control!)
 * Multi Columns
@@ -57,7 +57,7 @@ No more pain & No more shortcodes
 * No coding skills required
 * No Shortcodes
 * Translation ready
-* GDPR compliance 
+* GDPR compliance
 * PHP 7 compatible
 
 == Getting Started ==
@@ -66,7 +66,7 @@ No more pain & No more shortcodes
 
 1. Log in to your WordPress dashboard.
 2. Navigate to "Plugins > Add New".
-3. In the search field type "sogrid" and click Search Plugins. 
+3. In the search field type "sogrid" and click Search Plugins.
 4. Install it by simply clicking "Install Now".
 5. Click on "Activate".
 
@@ -106,10 +106,13 @@ No, Sogrid works out of the box with any WordPress themes. You just need to inst
 
 == Changelog ==
 
+= 1.5.6 =
+* [Fix] Fixes Plugin Check reported errors.
+
 = 1.5.5 =
 * [Fix] Fixes https://patchstack.com/database/report-preview/9ac6af88-3873-4ecd-8ad1-7c241c595916?pin=givkl6GW8jxwR2Oy.
 * [Fix] Fixes a PHP issue
-* [Fix] Fixes a deprecated hook 
+* [Fix] Fixes a deprecated hook
 
 = 1.5.2 =
 * [Fix] Fixed a pagination bug.
@@ -147,7 +150,7 @@ No, Sogrid works out of the box with any WordPress themes. You just need to inst
 * Disabled sticky posts
 
 = 1.2.1 =
-* Wordpress 5.3+ Support 
+* Wordpress 5.3+ Support
 * Replaced deprecated api.
 
 = 1.2.0 =
@@ -171,7 +174,7 @@ No, Sogrid works out of the box with any WordPress themes. You just need to inst
 
 * New: Ability to show/hide post excerpt.
 * Dev: Code improvements.
-* Update: Translation file. 
+* Update: Translation file.
 
 = 0.12.1 =
 
@@ -182,7 +185,7 @@ No, Sogrid works out of the box with any WordPress themes. You just need to inst
 * Feature: Added background color option for most blocks.
 * Feature: Added margin/padding options for most blocks.
 * Update: Translation file.
-* Bug: Fixed overlay block bug when an article has no feature thumbnail. 
+* Bug: Fixed overlay block bug when an article has no feature thumbnail.
 * Dev: Code refactoring.
 
 = 0.11.0 =

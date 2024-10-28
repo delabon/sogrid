@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Block abstract class
@@ -13,10 +13,10 @@ abstract class Sogrid_Block{
 
     /** @var string ex bordered */
     public $name = '';
-    
+
     /**
      * Render Style
-     * 
+     *
      * @param array $attributes
      */
     abstract protected function renderStyle( $attributes );
@@ -30,7 +30,7 @@ abstract class Sogrid_Block{
         if ( ! function_exists( 'register_block_type' ) ) {
             return;
         }
-        
+
         register_block_type( $this->slug, array(
             'attributes' => $this->attributes,
             'render_callback' => array( $this, 'render' ),
@@ -62,13 +62,13 @@ abstract class Sogrid_Block{
         $desktop_cols = isset( $attributes['columns'] ) ? esc_attr( $attributes['columns'] ) : '';
         $tablet_cols = isset( $attributes['tabletColumns'] ) ? esc_attr( $attributes['tabletColumns'] ) : '';
         $mobile_cols = isset( $attributes['mobileColumns'] ) ? esc_attr( $attributes['mobileColumns'] ) :  '';
-        
+
         return '
                 <style>'.$this->renderStyle($attributes).'</style>
-                
-                <script>var '. str_replace('-', '_', $attributes['uid'] ) .' = '.json_encode($attributes).';</script>
-                
-                <div 
+
+                <script>var '. str_replace('-', '_', $attributes['uid'] ) .' = ' . json_wp_json_encode($attributes) . ';</script>
+
+                <div
                     id='.esc_attr( $attributes['uid'] ).'
                     class="sogrid sogrid--'.$this->name.'"
                     data-desktop="'.$desktop_cols.'"
@@ -77,11 +77,11 @@ abstract class Sogrid_Block{
                 >
 
                     '.( $attributes['paginationPos'] === 'top' ? $paginationOutput : '' ).'
-                    
+
                     <div class="sogrid__posts" data-page="1">' . $itemsOutput . '</div>
 
                     '.( $attributes['paginationPos'] === 'bottom' ? $paginationOutput : '' ).'
-                
+
                 </div>';
     }
 
@@ -115,9 +115,9 @@ abstract class Sogrid_Block{
             }
 
             $output .= '
-                      
+
             <article class="sogrid__entry'.$has_thumbnail.'">
-            
+
                 '.$thumbnail.'
 
                 <div class="sogrid__entry__content">
@@ -129,7 +129,7 @@ abstract class Sogrid_Block{
                     </h3>
 
                     '.Sogrid_Helpers::renderPostMeta( $post, $attributes ).'
-                    
+
                     '.Sogrid_Helpers::renderPostExcerpt( $post, $attributes ).'
 
                     '.Sogrid_Helpers::renderPostReadMore( $post, $attributes ).'
@@ -137,7 +137,7 @@ abstract class Sogrid_Block{
                 </div>
 
             </article>';
-    
+
         }
 
         return $output;

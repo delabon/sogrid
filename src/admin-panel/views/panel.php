@@ -1,8 +1,8 @@
-<h1 class="sog_title">Sogrid (<?php echo SOGRID_VERSION ?>)</h1>
+<h1 class="sog_title">Sogrid (<?php echo esc_html(SOGRID_VERSION) ?>)</h1>
 
 <div class="sog_panel">
 
-    <?php 
+    <?php
         require_once __DIR__ . '/menu.php';
 
         $tab = isset($_GET['tab']) ? $_GET['tab'] : 'general';

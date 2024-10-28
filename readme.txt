@@ -1,6 +1,6 @@
 === Wordpress Post Grid Layouts with Pagination - Sogrid ===
 Contributors: delabon
-Requires at least: 5
+Requires at least: 5.0
 Tested up to: 6.6
 Stable tag: 1.5.5
 Requires PHP: 5.4
@@ -105,6 +105,9 @@ No, Sogrid works out of the box with any WordPress themes. You just need to inst
 7. screenshot-7.(png|jpg)
 
 == Changelog ==
+
+= 1.5.6 =
+* [Fix] Fixes Plugin Check reported errors.
 
 = 1.5.5 =
 * [Fix] Fixes https://patchstack.com/database/report-preview/9ac6af88-3873-4ecd-8ad1-7c241c595916?pin=givkl6GW8jxwR2Oy.
