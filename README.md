@@ -2,7 +2,7 @@
 Contributors: delabon
 Requires at least: 5.0
 Tested up to: 6.6
-Stable tag: 1.5.5
+Stable tag: 1.5.6
 Requires PHP: 5.4
 Tags: grid, masonry, post grid, gutenberg grid, gutenberg masonry
 License: GPLv2 or later
