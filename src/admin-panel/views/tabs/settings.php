@@ -1,6 +1,18 @@
 <?php
-    if( isset( $_POST['sogrid_settings_nonce'] ) ){
+    if( isset( $_POST['sogrid_settings_nonce'], $_POST['sogrid_settings_excerpt_max'] ) ){
+		if (!wp_verify_nonce($_POST['sogrid_settings_nonce'], 'sogrid_settings_nonce')) {
+			wp_die('Security check');
+		}
+
+		$allowedSettings = [
+			'sogrid_settings_excerpt_max' => true
+		];
+
         foreach ( $_POST as $key => $value ){
+			if (!isset($allowedSettings[$key])) {
+				continue;
+			}
+
             update_option($key, $value);
         }
     }
@@ -14,7 +26,7 @@
 
     <div>
         <form method="POST">
-            
+
             <input type="hidden" name="sogrid_settings_nonce" value="<?php echo wp_create_nonce('sogrid_settings_nonce') ?>" >
 
             <table class="form-table" role="presentation">

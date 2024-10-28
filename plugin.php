@@ -5,7 +5,7 @@
  * Description: Multiple grid design blocks.
  * Author: Sabri Taieb
  * Author URI: https://delabon.com/
- * Version: 1.5.2
+ * Version: 1.5.5
  * Text Domain: sogrid
  * Domain Path: /languages/
  */
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Defined
  */
-define('SOGRID_VERSION', '1.5.2');
+define('SOGRID_VERSION', '1.5.5');
 define('SOGRID_URL', plugin_dir_url( __FILE__ ));
 define('SOGRID_DIR', __DIR__);
 define('SOGRID_PANEL_URL', admin_url('admin.php?page=sogrid'));
@@ -39,7 +39,7 @@ class Sogrid{
         add_action( 'enqueue_block_editor_assets', array( $this, 'load_editor_assets'), 9999 );
         add_action( 'after_setup_theme', array( $this, 'image_sizes') );
         add_action( 'after_setup_theme', array( $this, 'post_formats') );
-        add_filter( 'block_categories', array( $this, 'add_block_categories'), PHP_INT_MAX, 2 );
+        add_filter( 'block_categories_all', array( $this, 'add_block_categories'), PHP_INT_MAX, 2 );
         add_action( 'rest_api_init', array( $this, 'register_rest_fields' ) );
         add_action( 'plugins_loaded', array( $this, 'load_language' ) );
         add_action( 'admin_menu', array( $this, 'add_admin_menu' ));
@@ -48,17 +48,17 @@ class Sogrid{
         // Blocks
         require_once __DIR__ . '/src/Block.php';
         require_once __DIR__ . '/src/blocks/normal/index.php';
-        require_once __DIR__ . '/src/blocks/masonry/index.php';        
+        require_once __DIR__ . '/src/blocks/masonry/index.php';
         require_once __DIR__ . '/src/blocks/classic/index.php';
-        require_once __DIR__ . '/src/blocks/overlay/index.php';  
-        require_once __DIR__ . '/src/blocks/bordered/index.php';   
-        require_once __DIR__ . '/src/blocks/pinterest/index.php';    
-        require_once __DIR__ . '/src/blocks/pinterest-masonry/index.php';    
-        require_once __DIR__ . '/src/blocks/oos1/index.php';  
+        require_once __DIR__ . '/src/blocks/overlay/index.php';
+        require_once __DIR__ . '/src/blocks/bordered/index.php';
+        require_once __DIR__ . '/src/blocks/pinterest/index.php';
+        require_once __DIR__ . '/src/blocks/pinterest-masonry/index.php';
+        require_once __DIR__ . '/src/blocks/oos1/index.php';
         require_once __DIR__ . '/src/blocks/oos2/index.php';
         require_once __DIR__ . '/src/blocks/tos1/index.php';
     }
-        
+
     /**
      * Plugin Activation
      * Add a check for our plugin before redirecting
@@ -71,15 +71,15 @@ class Sogrid{
      * Redirect to the admin page on single plugin activation
      */
     function activation_redirect() {
-        
+
         if ( get_option( 'sogrid_do_activation_redirect', false ) ) {
 
             delete_option( 'sogrid_do_activation_redirect' );
-        
+
             if( ! isset( $_GET['activate-multi'] ) ) {
 
                 wp_redirect( "admin.php?page=sogrid" );
-            
+
             }
         }
     }
@@ -94,45 +94,45 @@ class Sogrid{
     /**
 	 * Enqueue Admin Panel assets.
 	 */
-	function load_admin_assets( $key ) { 
-                    
+	function load_admin_assets( $key ) {
+
         if( $key !== 'toplevel_page_sogrid' ) return;
-    
-        wp_enqueue_style( 
-            'sogrid-admin-panel', 
-            SOGRID_URL . '/dist/admin.min.css', 
-            array(), 
-            SOGRID_VERSION 
+
+        wp_enqueue_style(
+            'sogrid-admin-panel',
+            SOGRID_URL . '/dist/admin.min.css',
+            array(),
+            SOGRID_VERSION
         );
-    
-        wp_enqueue_script( 
-            'sogrid-admin-panel', 
-            SOGRID_URL . '/dist/admin.min.js', 
-            array('jquery'), 
-            SOGRID_VERSION, 
-            true 
+
+        wp_enqueue_script(
+            'sogrid-admin-panel',
+            SOGRID_URL . '/dist/admin.min.js',
+            array('jquery'),
+            SOGRID_VERSION,
+            true
         );
 
     }
-    
+
 	/**
 	 * Enqueue Gutenberg block assets for both frontend and backend.
 	 */
-	function load_assets() { 
-                    
+	function load_assets() {
+
 		if( is_admin() ) return;
-	
+
         wp_enqueue_style(
-            'sogrid-style-build', 
-            SOGRID_URL . '/dist/style.build.css', 
-            array(), 
-            SOGRID_VERSION 
+            'sogrid-style-build',
+            SOGRID_URL . '/dist/style.build.css',
+            array(),
+            SOGRID_VERSION
         );
-                
+
         wp_enqueue_script(
-            'sogrid-frontend', 
-            SOGRID_URL . '/dist/frontend.min.js', 
-            array('jquery', 'masonry'), 
+            'sogrid-frontend',
+            SOGRID_URL . '/dist/frontend.min.js',
+            array('jquery', 'masonry'),
             SOGRID_VERSION,
             true
         );
@@ -143,7 +143,7 @@ class Sogrid{
 	}
 
 	/**
-	 * Load Only Editor Assets 
+	 * Load Only Editor Assets
 	 */
 	function load_editor_assets(){
 
@@ -161,20 +161,20 @@ class Sogrid{
 		);
 
 		wp_enqueue_script(
-			'sogrid-blocks-build', 
-			SOGRID_URL . '/dist/blocks.build.js', 
-			$dependencies, 
-			SOGRID_VERSION, 
-			true 
+			'sogrid-blocks-build',
+			SOGRID_URL . '/dist/blocks.build.js',
+			$dependencies,
+			SOGRID_VERSION,
+			true
 		);
 
 		wp_enqueue_style(
-			'sogrid-block-editor-build', 
-			SOGRID_URL . '/dist/editor.build.css', 
-			array( 'wp-edit-blocks' ), 
-			SOGRID_VERSION 
+			'sogrid-block-editor-build',
+			SOGRID_URL . '/dist/editor.build.css',
+			array( 'wp-edit-blocks' ),
+			SOGRID_VERSION
 		);
-		
+
 	}
 
 	/**
@@ -183,7 +183,7 @@ class Sogrid{
 	function image_sizes(){
         add_theme_support( 'post-thumbnails' );
     }
-    
+
 	/**
 	 * Post Format
 	 */
@@ -213,37 +213,37 @@ class Sogrid{
         if( ! isset( $_POST['bokez-submit'] ) ) return;
         if( ! current_user_can('level_8') ) return;
         if ( ! wp_verify_nonce( $_POST['nonce'], 'bokez-admin-settings' ) ) return;
-    
+
         foreach ( $_POST as $key => $value ) {
             update_option( 'bokez_' . sanitize_text_field($key), sanitize_text_field($value) );
         }
     }
-    
+
     /**
      * Add Admin Menu Item
      */
     function add_admin_menu() {
-    
+
         $this->save_panel_settings();
-        
-        add_menu_page( 
-            'Sogrid', 
-            'Sogrid Blocks', 
-            'manage_options', 
-            'sogrid', 
-            array( $this, 'render_panel' ), 
-            'dashicons-screenoptions', 
-            200  
+
+        add_menu_page(
+            'Sogrid',
+            'Sogrid Blocks',
+            'manage_options',
+            'sogrid',
+            array( $this, 'render_panel' ),
+            'dashicons-screenoptions',
+            200
         );
     }
-    
+
     /**
      * Render the admin page
      */
     function render_panel(){
         require_once __DIR__ . '/src/admin-panel/views/panel.php';
     }
-    
+
     /**
      * Create API fields for additional post info
      */
@@ -288,7 +288,7 @@ class Sogrid{
                 'schema' => null,
             )
         );
-        
+
         register_rest_field(
             'post',
             'date_formated',
@@ -298,7 +298,7 @@ class Sogrid{
                 'schema' => null,
             )
         );
-        
+
     }
 
     /**
@@ -345,7 +345,8 @@ class Sogrid{
             'sogrid-posts-grid',
             false
         );
-        return $img_array[0];
+
+        return is_array($img_array) && isset($img_array[0]) ? $img_array[0] : '';
     }
 
     /**

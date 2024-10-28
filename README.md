@@ -1,8 +1,8 @@
 === Wordpress Post Grid Layouts with Pagination - Sogrid ===
 Contributors: delabon
 Requires at least: 5
-Tested up to: 5.7
-Stable tag: 1.5.2
+Tested up to: 6.6
+Stable tag: 1.5.5
 Requires PHP: 5.4
 Tags: grid, masonry, post grid, gutenberg grid, gutenberg masonry
 License: GPLv2 or later
@@ -105,6 +105,11 @@ No, Sogrid works out of the box with any WordPress themes. You just need to inst
 7. screenshot-7.(png|jpg)
 
 == Changelog ==
+
+= 1.5.5 =
+* [Fix] Fixes https://patchstack.com/database/report-preview/9ac6af88-3873-4ecd-8ad1-7c241c595916?pin=givkl6GW8jxwR2Oy.
+* [Fix] Fixes a PHP issue
+* [Fix] Fixes a deprecated hook 
 
 = 1.5.2 =
 * [Fix] Fixed a pagination bug.
