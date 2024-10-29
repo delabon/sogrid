@@ -5,7 +5,7 @@
  * Description: Multiple grid design blocks.
  * Author: Sabri Taieb
  * Author URI: https://delabon.com/
- * Version: 1.5.7
+ * Version: 1.5.8
  * Text Domain: sogrid
  * Domain Path: /languages/
  * License: GPLv2
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Defined
  */
-define('SOGRID_VERSION', '1.5.7');
+define('SOGRID_VERSION', '1.5.8');
 define('SOGRID_URL', plugin_dir_url( __FILE__ ));
 define('SOGRID_DIR', __DIR__);
 define('SOGRID_PANEL_URL', admin_url('admin.php?page=sogrid'));

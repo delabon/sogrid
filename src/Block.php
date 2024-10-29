@@ -66,7 +66,7 @@ abstract class Sogrid_Block{
         return '
                 <style>'.$this->renderStyle($attributes).'</style>
 
-                <script>var '. str_replace('-', '_', $attributes['uid'] ) .' = ' . json_wp_json_encode($attributes) . ';</script>
+                <script>var '. str_replace('-', '_', $attributes['uid'] ) .' = ' . wp_json_encode($attributes) . ';</script>
 
                 <div
                     id='.esc_attr( $attributes['uid'] ).'
