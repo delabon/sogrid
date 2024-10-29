@@ -11,6 +11,7 @@
 		foreach ($items as $item) {
 			if ($item['tab'] === $tab) {
 				require_once __DIR__ . '/tabs/'.$tab.'.php';
+				break;
 			}
 		}
     ?>
