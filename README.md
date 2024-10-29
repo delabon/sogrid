@@ -2,7 +2,7 @@
 Contributors: delabon
 Requires at least: 5.0
 Tested up to: 6.6
-Stable tag: 1.5.6
+Stable tag: 1.5.7
 Requires PHP: 5.4
 Tags: grid, masonry, post grid, gutenberg grid, gutenberg masonry
 License: GPLv2 or later
@@ -105,6 +105,9 @@ No, Sogrid works out of the box with any WordPress themes. You just need to inst
 7. screenshot-7.(png|jpg)
 
 == Changelog ==
+
+= 1.5.7 =
+* [Fix] Fixes https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/sogrid/wordpress-post-grid-layouts-with-pagination-sogrid-152-authenticated-admin-local-file-inclusion
 
 = 1.5.6 =
 * [Fix] Fixes Plugin Check reported errors.
