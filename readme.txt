@@ -9,84 +9,77 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 10 Wordpress post grid layouts to create beautiful blog homepage and/or to show articles on your posts or pages.
-Customizable, easy to use and mobile ready.
+Easy to use, fully responsive, and mobile-ready.
+
+Create stunning blog homepages and showcase articles with 10 customizable WordPress post grid layouts using Sogrid.
 
 == Description ==
 
-[See the Live demo](https://delabon.com/demo/sogrid/) | [Support](https://delabon.com/support) | [See Screenshots](#screenshots)
+[Support](https://delabon.com/support) | [See Screenshots](#screenshots)
 
 [youtube https://www.youtube.com/watch?v=Q4e1KK_Xek4]
 
-## 10 Advanced Wordpress Post Grid Layouts
+## Enhance Your WordPress with Sogrid’s Advanced Post Grid Layouts
 
-Sogrid is a collection of beautiful Wordpress post grid layouts. It is super easy to install and use.
+Unlock the potential of your WordPress site with **Sogrid**, the ultimate plugin for creating stunning, customizable post grid layouts. Perfectly designed to enhance both usability and aesthetics, Sogrid is easy to install, SEO-friendly, and incredibly versatile, with layouts that look amazing on all devices.
 
-10 Customizable blocks to create unique and beautiful pages and posts.
+## Why Choose Sogrid?
 
-Sogrid is a 100% responsive, With the ability to change columns and font size on mobile, tablet and desktop devices. So your grid of posts will always look great on all devices.
+With **10 advanced, fully customizable grid blocks**, Sogrid offers you the creative freedom to design unique, visually appealing pages and posts that align with your brand and engage your audience.
 
-**With version 1.2+ you can add pagination to your grids!**
+**Responsive and Device-Friendly**
+Sogrid is built with responsiveness in mind. Customize column and font sizes for mobile, tablet, and desktop, ensuring a polished look across all devices.
 
-No more pain & No more shortcodes
+**Now Featuring Pagination**
+With **version 1.2+**, Sogrid introduces pagination to your grids, making navigation effortless for users exploring your content.
 
-* [Normal Grid Block](https://delabon.com/demo/sogrid/)
-* [Pinterest Grid Block](https://delabon.com/demo/sogrid/pinterest/)
-* [Pinterest Masonry Block](https://delabon.com/demo/sogrid/pinterest-masonry/)
-* [Overlay Grid Block](https://delabon.com/demo/sogrid/overlay/)
-* [One & Others Grid Block (Layout 1)](https://delabon.com/demo/sogrid/one-others-style-1/)
-* [One & Others Grid Block (Layout 2)](https://delabon.com/demo/sogrid/one-others-style-2/)
-* [Two & Others Grid Block](https://delabon.com/demo/sogrid/two-others/)
-* [Masonry Block](https://delabon.com/demo/sogrid/masonry/)
-* [Bordered Grid Block](https://delabon.com/demo/sogrid/bordered/)
-* [Classic Posts Block](https://delabon.com/demo/sogrid/classic/)
+**User-Friendly, No Coding Required**
+Say goodbye to shortcodes! Sogrid’s intuitive block interface makes it easy for anyone to build beautiful grids—no coding skills necessary.
 
-== Top Features ==
+## 10 Beautiful Grid Blocks to Choose From
 
-* 10 Layouts
-* Ajax Pagination
-* Customizable
-* Easy To Use
-* 100% Responsive and mobile friendly
-* Columns & Font Size By Device (Responsive Control!)
-* Multi Columns
-* Multi Categories
-* Unlimited Colors
-* Show/Hide Author, Date, Categories ...
-* Limit the number of posts
-* Display recent posts
-* No coding skills required
-* No Shortcodes
-* Translation ready
-* GDPR compliance
-* PHP 7 compatible
+* Normal Grid Block
+* Pinterest Grid Block
+* Pinterest Masonry Block
+* Overlay Grid Block
+* One & Others Grid Block (Layout 1)
+* One & Others Grid Block (Layout 2)
+* Two & Others Grid Block
+* Masonry Block
+* Bordered Grid Block
+* Classic Posts Block
 
-== Getting Started ==
+## Key Features for SEO and Flexibility
 
-= Automatic installation =
+* 10 Unique Layouts
+* Ajax Pagination for faster load times
+* 100% Responsive & Mobile Friendly
+* Customizable Columns & Font Sizes by Device
+* Unlimited Color Options
+* Show/Hide Author, Date, Categories, and More
+* Multi-Category Support
+* Recent Posts Display
+* Translation Ready & GDPR Compliant
 
-1. Log in to your WordPress dashboard.
-2. Navigate to "Plugins > Add New".
-3. In the search field type "sogrid" and click Search Plugins.
-4. Install it by simply clicking "Install Now".
-5. Click on "Activate".
+## Easy Installation and Setup
+**Automatic Installation**
 
-= Manual installation =
+* Go to **Plugins > Add New** on your WordPress dashboard.
+* Search for “Sogrid” and click Install Now.
+* Click Activate.
 
-1. Download the plugin.
-2. Upload the plugin folder using an FTP/SFTP software to your wordpress/wp-content/plugins folder.
-3. Navigate to "Plugins".
-4. Scroll Down until your find "sogrid" plugin in the list.
-5. Click on "Activate".
+**Manual Installation**
 
-Complete guide: [The WordPress codex tutorial](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation)
+* Download the plugin and upload it to your WordPress directory.
+* Navigate to **Plugins**, locate “Sogrid” in your list, and click **Activate**.
 
-= Adding Your First Block =
+## Start Creating Your Grids Today
 
-1. Create or open a new page/post.
-2. Click on the "plus" button.
-3. Search for "sogrid"
-4. You should see a list of Sogrid blocks.
-5. Click on one of them.
+* Create or open a new page or post.
+* Click the plus button and search for “Sogrid.”
+* Choose any of the Sogrid blocks to get started!
+
+Experience how easy and powerful post grid layouts can be—**download Sogrid today** and transform your WordPress site!
 
 == Frequently Asked Questions ==
 
